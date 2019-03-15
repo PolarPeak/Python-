@@ -1,5 +1,6 @@
 # Python-
 Python的小项目记录我成长的点滴
+
 扫描ç段存活主机
 
 import threading
@@ -8,6 +9,7 @@ import subprocess
 import sys
 
 class Ping(threading.Thread):
+
     def __init__(self,queue):
         threading.Thread.__init__(self)
         self._queue = queue
@@ -22,7 +24,9 @@ class Ping(threading.Thread):
                 print(ip)
 
 
+
 def main():
+
     threads = []
     threads_count = 50
     queue = Queue.Queue()
@@ -40,4 +44,5 @@ def main():
         i.join()
 
 if __name__ == "__main__":
+
     main()
